@@ -4,6 +4,10 @@
     "main": "index.js",
     "author": "Bhargav Makwana",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bhargavSarvadhi2023/send-email.git"
+    },
     "scripts": {
         "start": "nodemon src/app.ts",
         "format:check": "prettier --check .",
