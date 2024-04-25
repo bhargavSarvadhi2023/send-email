@@ -30,13 +30,12 @@ exports.SendNotificationEmail = void 0;
 const express_1 = __importDefault(require("express"));
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
-const logger_1 = require("./logger/logger");
 const cors_1 = __importDefault(require("cors"));
 const express_session_1 = __importDefault(require("express-session"));
 const middleware_1 = require("./middleware");
 const nodemailer_1 = require("./controller/nodemailer");
 Object.defineProperty(exports, "SendNotificationEmail", { enumerable: true, get: function () { return nodemailer_1.SendNotificationEmail; } });
-const port = 8000;
+const port = 43404;
 const isLocalhost = (req) => req.hostname === 'localhost'; //tempory
 class AppServer {
     constructor() {
@@ -54,7 +53,7 @@ class AppServer {
         }));
         app.use(middleware_1.ErrorHandler);
         app.listen(port, () => {
-            logger_1.logger.info(`🚀 Server is listening on Port:- ${port}`);
+            // logger.info(`🚀 Server is listening on Port:- ${port}`);
         });
     }
 }
