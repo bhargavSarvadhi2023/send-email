@@ -26,6 +26,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SendNotificationEmail = void 0;
 const express_1 = __importDefault(require("express"));
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
@@ -34,7 +35,7 @@ const cors_1 = __importDefault(require("cors"));
 const express_session_1 = __importDefault(require("express-session"));
 const middleware_1 = require("./middleware");
 const nodemailer_1 = require("./controller/nodemailer");
-module.exports = nodemailer_1.SendNotificationEmail;
+Object.defineProperty(exports, "SendNotificationEmail", { enumerable: true, get: function () { return nodemailer_1.SendNotificationEmail; } });
 const port = process.env.PORT_SERVER || 8000;
 const isLocalhost = (req) => req.hostname === 'localhost'; //tempory
 class AppServer {
