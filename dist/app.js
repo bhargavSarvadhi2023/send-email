@@ -35,7 +35,7 @@ const express_session_1 = __importDefault(require("express-session"));
 const middleware_1 = require("./middleware");
 const nodemailer_1 = require("./controller/nodemailer");
 Object.defineProperty(exports, "SendNotificationEmail", { enumerable: true, get: function () { return nodemailer_1.SendNotificationEmail; } });
-const port = 43404;
+const port = process.env.PORT_SERVER || 8000;
 const isLocalhost = (req) => req.hostname === 'localhost'; //tempory
 class AppServer {
     constructor() {
@@ -52,9 +52,7 @@ class AppServer {
             saveUninitialized: true,
         }));
         app.use(middleware_1.ErrorHandler);
-        app.listen(port, () => {
-            // logger.info(`🚀 Server is listening on Port:- ${port}`);
-        });
+        app.listen(port, () => { });
     }
 }
 new AppServer();
