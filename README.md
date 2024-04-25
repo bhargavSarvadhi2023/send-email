@@ -19,7 +19,7 @@ yarn add mailer
 ## Usage
 
 ```
-import { SendNotificationEmail } from 'send-notification-email';
+import { SendNotificationEmail } from 'mailer';
 
 // Initialize SendNotificationEmail instance
 const emailSender = new SendNotificationEmail();
