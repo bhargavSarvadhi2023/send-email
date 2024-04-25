@@ -48,9 +48,6 @@ const transporter = nodemailer_1.default.createTransport({
     },
 });
 class SendNotificationEmail {
-    constructor(subject, email_from, email_to, extra, html_content) {
-        this.sendEmail(subject, email_to, extra, html_content);
-    }
     sendEmail(subject, emails_to, extra, html_content) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
