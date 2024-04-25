@@ -6,7 +6,7 @@
     "license": "MIT",
     "scripts": {
         "start": "nodemon src/app.ts",
-        "build": "tsc",
+        "build": "tsc --declaration",
         "format:check": "prettier --check .",
         "format:write": "prettier --write .",
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
